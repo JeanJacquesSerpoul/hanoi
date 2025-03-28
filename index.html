@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Tours de Hanoï</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <!-- Optional: include p5.sound.min.js if you add sound effects later -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tours de Hanoï</h1>
+
+    <div class="controls">
+        <label for="numDisks">Nombre d'anneaux:</label>
+        <select id="numDisks" onchange="resetGame()">
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5" selected>5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <button onclick="resetGame()">Réinitialiser</button>
+    </div>
+
+    <div id="game-container">
+        <!-- p5.js canvas will be created here -->
+    </div>
+
+    <div class="info">
+        <p>Mouvements: <span id="moves">0</span></p>
+        <p>Minimum requis: <span id="min-moves">0</span></p>
+        <p>Temps: <span id="timer">00:00</span></p>
+    </div>
+
+    <div id="win-message" style="display: none; color: green; font-weight: bold; margin-top: 10px;">
+        Félicitations! Vous avez gagné!
+    </div>
+
+    <script src="sketch.js"></script>
+</body>
+</html>

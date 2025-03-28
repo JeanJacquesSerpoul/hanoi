@@ -1,0 +1,63 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    touch-action: none; /* Prevents default touch behaviors like scrolling/zooming */
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.controls {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls select, .controls button {
+    padding: 8px 12px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#game-container {
+    margin-bottom: 15px;
+    /* Style for the container, the canvas itself is styled by p5js */
+    border: 1px solid #ccc;
+    /* Prevent canvas overflow issues on some mobiles */
+    overflow: hidden;
+    width: 95%; /* Adjust as needed */
+    max-width: 600px; /* Max width for larger screens */
+    aspect-ratio: 2 / 1; /* Maintain aspect ratio roughly */
+    position: relative; /* Needed for absolute positioning if required */
+}
+
+/* Ensure canvas fills its container */
+#game-container canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.info {
+    display: flex;
+    gap: 20px;
+    font-size: 1.1em;
+}
+
+.info p {
+    margin: 5px 0;
+}
+
+.info span {
+    font-weight: bold;
+}
